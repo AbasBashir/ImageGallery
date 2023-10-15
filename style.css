@@ -3,4 +3,59 @@
     padding: 0;
     border: none;
     box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
 }
+
+body{
+    background-color: #191919;
+}
+
+
+.gallery{
+    width: 1100px;
+    margin: 0 50px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.gallery div img{
+    filter: grayscale(100%);
+    width: 400px;
+    height: 580px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.gallery div{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    padding: 10px;
+}
+
+.gallery::-webkit-scrollbar{
+    display: none;
+}
+
+
+#gallery-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+
+
+#back-btn, #next-btn{
+    width: 90px;
+    cursor: pointer;
+}
+
+.gallery div img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+
+
